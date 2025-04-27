@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 # Armazena clientes conectados
 connected_clients = set()
 
-async def handle_client(websocket, path):
+async def handle_client(websocket):
     logging.info(f"Cliente conectado: {websocket.remote_address}")
     connected_clients.add(websocket)
     
