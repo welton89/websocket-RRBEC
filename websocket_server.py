@@ -34,7 +34,7 @@ async def handle_client(websocket):
     except Exception as e:
         logging.error(f"Erro durante a conexão de {websocket.remote_address}: {e}")
     finally:
-        connected_clients.discard(websocket)  # usar discard para evitar KeyError se não estiver no set
+        connected_clients.discard(websocket) 
 
 async def process_message(data, websocket):
     if "type" in data:
